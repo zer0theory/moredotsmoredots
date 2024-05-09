@@ -1,0 +1,73 @@
+window.xfce4-panel widget > box > button > image{
+   padding: 0.2em 0.16em;  -gtk-icon-transform: scale(0.8);
+}
+
+window#whiskermenu-window treeview>* {
+  padding:0.2em 0.16em;
+}
+
+#xfce4-notification-plugin image {
+	-gtk-icon-transform: scale(0.85) translateY(3px);
+}
+#pulseaudio-button image {
+	-gtk-icon-transform: scale(0.9);
+}
+#xfce4-power-manager-plugin image {
+	-gtk-icon-transform: scale(0.75);
+}
+
+VteTerminal, vte-terminal {
+    padding: 13px;
+}
+
+.xfce4-panel {
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.xfce4-panel .tasklist .toggle :checked {
+  border-radius: 10px;
+}
+
+.takslist button:checked {
+  border-bottom: 3px solid white;
+}
+
+.flat,
+.toggle {
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 16px;
+  padding: 4px;
+}
+.flat:hover,
+.toggle:hover {
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 16px;
+  padding: 4px;
+  background: purple;
+}
+.flat:checked,
+.toggle:checked {
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 16px;
+  padding: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

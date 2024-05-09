@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mycow=$((RANDOM%6))
+
+case $mycow in
+  "0") fortune | cowsay -f sodomized | lolcat ;;
+  "1") fortune | cowsay -f small | lolcat  ;;
+  "2") fortune | cowsay -f ghostbusters | lolcat ;;
+  "3") fortune | cowsay -f eyes | lolcat ;;
+  "4") fortune | cowsay -f daemon | lolcat ;;
+  "5") fortune | cowsay -f bunny | lolcat ;;
+esac
+
+

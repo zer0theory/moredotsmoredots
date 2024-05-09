@@ -1,0 +1,116 @@
+""""""""""""""""""""""""""""""""
+"   zerotheory's vimrc file    "
+"   using neovim now           "
+""""""""""""""""""""""""""""""""
+
+
+" Notes
+" you can :so % to source this current file.
+
+
+""" Initial Setup 
+" Turning line numbers on by default do :set nonumber to disable
+syntax enable
+set number
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" highlight search , do :noh to clear highlights
+set hlsearch
+set incsearch
+set wildmenu
+
+" Keep cursor more in the center of screen. Number is padding.
+set scrolloff=7
+
+" Set colorscheme 
+" folder is /usr/share/vim/vim90/colors/
+set background=dark
+
+"colorscheme dracula
+"colorscheme elflord
+"colorscheme hyper
+"colorscheme true
+"colorscheme shades-of-purple
+colorscheme zerohax
+"colorscheme hackerman
+"colorscheme koehler
+"colorscheme challenger-deep
+"colorscheme jellybeans
+"colorscheme peachpuff
+"colorscheme spacecamp
+"colorscheme dark-meadow
+"colorscheme onedark
+
+" Make sure colorscheme keeps default background 
+hi Normal guibg=NONE ctermbg=NONE
+
+"START the plugin manager vim-plug
+call plug#begin()
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+"Put plugins here starting with Plug as below
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
+Plug 'jiangmiao/auto-pairs'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'rwxrob/vim-pandoc-syntax-simple'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'cespare/vim-toml'
+Plug 'wookayin/vim-typora'
+Plug 'ap/vim-css-color'
+Plug 'ryanoasis/vim-devicons'
+Plug 'luochen1990/rainbow'
+Plug 'uguu-org/vim-matrix-screensaver'
+Plug 'elkowar/yuck.vim'
+Plug 'thesephist/ink'
+Plug 'dylanaraps/wal.vim'
+"Plug 'github/copilot.vim'
+
+"plugins for neovim
+Plug 'xiyaowong/transparent.nvim'
+
+"neovim colorcheme
+Plug 'zootedb0t/citruszest.nvim'
+Plug 'eldritch-theme/eldritch.nvim'
+
+
+" use :colorcheme wal to set the color
+
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" vim-airline is a bit distracting - work in progress 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+"run :PlugUpdate from time to time
+
+" Setting Theme for vim-airline
+let g:airline_theme='serene'
+"for Plug luochen1990/rainbow, set to 0 if you want to enable it later via
+" :RainbowToggle
+let g:rainbow_active = 1 
+
+au BufNewFile,BufRead *.ink set filetype=ink
+
+" disable folding
+set nofoldenable
+
+" turn spell check on , can be turned off with :set nospell
+set spell
+set spellfile=~/.vim/spell/en.utf-8.add
+
+" turn off folding in markdown
+let g:vim_markdown_folding_disabled = 1
