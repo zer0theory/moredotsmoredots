@@ -71,6 +71,13 @@ alias open='xdg-open' # uses systems default program
 alias nano='figlet "Just say na-NO!"|lolcat'
 alias files='yazi'
 
+# memory readout
+mem () {
+/usr/bin/free -h
+echo "-----------"
+/bin/df -h
+}
+
 if [ -f ~/.bash_personal ]; then
       . ~/.bash_personal
 fi
