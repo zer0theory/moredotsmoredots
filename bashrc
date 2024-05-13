@@ -69,6 +69,7 @@ alias emoji='rofi -show emoji'
 alias gearlever='flatpak run it.mijorus.gearlever'
 alias open='xdg-open' # uses systems default program
 alias nano='figlet "Just say na-NO!"|lolcat'
+alias files='yazi'
 
 if [ -f ~/.bash_personal ]; then
       . ~/.bash_personal
