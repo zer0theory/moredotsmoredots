@@ -106,7 +106,7 @@ case $promptstart in
   "2") weather ;;
   "3") mycow ;;
   "4") fortune | lolcat ;;
-  "5") neofetch --backend kitty --source /home/zero/Pictures/arch-linux-icon-md-253589589.png --size 30%;;
+  "5") neofetch --backend kitty --source ~/Pictures/arch-linux-icon-md-253589589.png --size 30%;;
   "6") fastfetch -l blackarch --pipe false | lolcat;;
 esac
 
