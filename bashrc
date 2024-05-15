@@ -16,6 +16,11 @@ export EDITOR='vim'
 # 	. /usr/share/bash-completion/bash_completion
 # fi
 
+if [ -f ~/.bash_personal ]; then
+      . ~/.bash_personal
+fi
+
+
 # History settings
 HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=3000
@@ -54,7 +59,7 @@ alias reflect='sudo reflector --country US --sort rate --latest 20 --protocol ht
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias mv='mv -iv'
 alias cp='cp -iv'
-alias weather='curl wttr.in'
+alias weather='curl wttr.in/$ZIPCODE'
 alias matrix='tmatrix -c default -C magenta'
 alias ip='ip -color=auto'
 alias kermit='curl -s https://www.reactiongifs.com/r/ktpng.gif | chafa -d 15 -s 30'
@@ -70,6 +75,7 @@ alias gearlever='flatpak run it.mijorus.gearlever'
 alias open='xdg-open' # uses systems default program
 alias nano='figlet "Just say na-NO!"|lolcat'
 alias files='yazi'
+alias world='telnet mapscii.me'
 
 # memory readout
 mem () {
@@ -77,10 +83,6 @@ mem () {
 echo "-----------"
 /bin/df -h
 }
-
-if [ -f ~/.bash_personal ]; then
-      . ~/.bash_personal
-fi
 
 
 # Custom Cows
@@ -112,7 +114,7 @@ esac
 # Default bash PS1 prompt incase shit breaks
 #PS1='[\u@\h \W]\$ '
 
-export PATH="$PATH:/home/zero/.local/bin"
+export PATH="$PATH:/home/$USER/.local/bin"
 
 export BAT_THEME='TwoDark'
 
