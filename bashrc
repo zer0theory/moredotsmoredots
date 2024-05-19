@@ -77,6 +77,10 @@ alias open='xdg-open' # uses systems default program
 alias nano='figlet "Just say na-NO!"|lolcat'
 alias files='yazi'
 alias world='telnet mapscii.me'
+alias ctrlc='xsel --input --clipboard'
+alias ctrlv='xsel --output --clipboard'
+alias bonsai='cbonsai -lip --time=0.1'
+alias inky='~/Downloads/Inky_linux/Inky-linux-x64/Inky'
 
 # memory readout
 mem () {
@@ -84,7 +88,6 @@ mem () {
 echo "-----------"
 /bin/df -h
 }
-
 
 # Custom Cows
 #mycow=$((RANDOM%6))
@@ -96,7 +99,7 @@ echo "-----------"
 #  "4") fortune | cowsay -f daemon | lolcat ;;
 #  "5") fortune | cowsay -f bunny | lolcat ;;
 #esac
-# Moved to mycow script
+# depreciated, moved to mycow script
 
 
 # Custom terminal starts
@@ -116,7 +119,6 @@ esac
 #PS1='[\u@\h \W]\$ '
 
 export PATH="$PATH:/home/$USER/.local/bin"
-
 export BAT_THEME='TwoDark'
 
 #pyenv 
