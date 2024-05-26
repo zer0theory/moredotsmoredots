@@ -16,10 +16,9 @@ export EDITOR='vim'
 # 	. /usr/share/bash-completion/bash_completion
 # fi
 
-if [ -f ~/.bash_personal ]; then
+if [[ -f ~/.bash_personal ]]; then
       . ~/.bash_personal
 fi
-
 
 # History settings
 HISTCONTROL=ignoreboth:erasedups
@@ -62,6 +61,9 @@ alias mv='mv -iv'
 alias cp='cp -iv'
 alias weather='curl wttr.in/$ZIPCODE'
 alias matrix='tmatrix -c default -C magenta'
+alias redmatrix='tmatrix -c default -C red'
+alias greenmatrix='tmatrix -c default'
+alias bluematrix='tmatrix -c default -C blue'
 alias ip='ip -color=auto'
 alias kermit='curl -s https://www.reactiongifs.com/r/ktpng.gif | chafa -d 15 -s 30'
 alias stank='curl -s https://www.reactiongifs.com/wp-content/uploads/2013/11/baby-dance.gif | chafa -d 15 -s 30'
@@ -81,6 +83,9 @@ alias ctrlc='xsel --input --clipboard'
 alias ctrlv='xsel --output --clipboard'
 alias bonsai='cbonsai -lip --time=0.1'
 alias inky='~/Downloads/Inky_linux/Inky-linux-x64/Inky'
+alias starwars='~/scripts/asciistarwars/starwars'
+alias anime='~/gitz/ani-cli/ani-cli'
+alias youtube='youtube-tui'
 
 # memory readout
 mem () {
