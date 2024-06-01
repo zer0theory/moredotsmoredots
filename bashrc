@@ -130,3 +130,4 @@ export BAT_THEME='TwoDark'
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+if [ -f "/home/zero/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/zero/.config/fabric/fabric-bootstrap.inc"; fi
