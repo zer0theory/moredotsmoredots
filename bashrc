@@ -86,6 +86,10 @@ alias inky='~/Downloads/Inky_linux/Inky-linux-x64/Inky'
 alias starwars='~/scripts/asciistarwars/starwars'
 alias anime='~/gitz/ani-cli/ani-cli'
 alias youtube='youtube-tui'
+alias vim-astro='NVIM_APPNAME=AstroNvim nvim'
+alias vim-nvchad='NVIM_APPNAME=nvChad nvim'
+alias vim-kickstart='NVIM_APPNAME=Kickstart nvim'
+alias cooldate='date +"%A, %B %d %Y, %I:%M %P"'
 
 # memory readout
 mem () {
@@ -93,6 +97,19 @@ mem () {
 echo "-----------"
 /bin/df -h
 }
+
+posh () {
+  poshy=$((RANDOM%6))
+  case $poshy in
+    "0") eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/nordtron.json)";;
+    "1") eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/tokyostorm.json)";;
+    "2") eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/pararussel.json)";;
+    "3") eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/negligible.json)";;
+    "4") eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/microverse.json)";;
+    "5") eval "$(oh-my-posh init bash --config $HOME/.config/ohmyposh/schema.json)";;
+  esac
+}
+
 
 # Custom Cows
 #mycow=$((RANDOM%6))
