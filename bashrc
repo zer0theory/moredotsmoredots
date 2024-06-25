@@ -8,7 +8,7 @@
 [[ $- != *i* ]] && return
 
 # Set vim as default editor.
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Check and source bash completion
 # This may not be needed
@@ -85,11 +85,13 @@ alias bonsai='cbonsai -lip --time=0.1'
 alias inky='~/Downloads/Inky_linux/Inky-linux-x64/Inky'
 alias starwars='~/scripts/asciistarwars/starwars'
 alias anime='~/gitz/ani-cli/ani-cli'
-alias youtube='youtube-tui'
+#alias youtube='youtube-tui'
 alias vim-astro='NVIM_APPNAME=AstroNvim nvim'
 alias vim-nvchad='NVIM_APPNAME=nvChad nvim'
 alias vim-kickstart='NVIM_APPNAME=Kickstart nvim'
 alias cooldate='date +"%A, %B %d %Y, %I:%M %P"'
+alias movies='mov-cli -s movies'
+alias youtube='mov-cli -s youtube'
 
 # memory readout
 mem () {
@@ -110,7 +112,6 @@ posh () {
   esac
 }
 
-
 # Custom Cows
 #mycow=$((RANDOM%6))
 #case $mycow in
@@ -122,7 +123,6 @@ posh () {
 #  "5") fortune | cowsay -f bunny | lolcat ;;
 #esac
 # depreciated, moved to mycow script
-
 
 # Custom terminal starts
 promptstart=$((RANDOM%7))
@@ -136,7 +136,6 @@ case $promptstart in
   "6") fastfetch -l blackarch --pipe false | lolcat;;
 esac
 
-
 # Default bash PS1 prompt incase shit breaks
 #PS1='[\u@\h \W]\$ '
 
@@ -148,3 +147,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 if [ -f "/home/zero/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/zero/.config/fabric/fabric-bootstrap.inc"; fi
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+# go path
+export PATH=$PATH:$HOME/go/bin
+
