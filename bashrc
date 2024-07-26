@@ -92,6 +92,8 @@ alias vim-kickstart='NVIM_APPNAME=Kickstart nvim'
 alias cooldate='date +"%A, %B %d %Y, %I:%M %P"'
 alias movies='mov-cli -s movies'
 alias youtube='mov-cli -s youtube'
+alias openports='sudo /usr/bin/ss -tulpn'
+alias watchports='sudo /usr/bin/watch /usr/bin/ss -tulpn'
 
 # memory readout
 mem () {
